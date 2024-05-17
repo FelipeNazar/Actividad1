@@ -1,0 +1,460 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #24242e;
+}
+
+/* ------------- Navbar ------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white; 
+}
+
+.navbar-links {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.navbar-toggle-input {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-links a {
+        display: inline-block; /* En lugar de block */
+        padding: 5px 10px; /* Reduce el padding */
+    }
+    
+    .navbar-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 10px;
+        box-sizing: border-box;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .navbar-toggle-input:checked ~ .navbar-links {
+        display: flex;
+    }
+}
+
+.navbar-left {
+    font-style: italic;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-title {
+    font-size: 24px;
+    margin-right: 0.5em;
+    color: #fbd782;
+}
+
+.inicio {
+    text-decoration: none; /* Quita el subrayado del enlace */
+}
+
+.navbar-image {
+    max-height: 100%;
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+}
+
+.navbar-right {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.navbar-link, .navbar-button {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar-link:hover {
+    background-color: #555;
+}
+
+.navbar-button {
+    background-color: #007BFF;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar-button:hover {
+    background-color: #0056b3;
+}
+
+/* Container */
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    
+}
+
+.section {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #c7c7c7;
+    color: white;
+    font-size: 20px;
+    height: 300px;
+    border: 1px solid black;
+}
+
+/* Seccion 1 */
+#section1 {
+    grid-column: span 1;
+    background-image: url('../img/seccion1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.seccion1-titulo{
+    backdrop-filter: blur(6px);
+    font-size: 24px;
+    margin-right: 1.5em;
+    color: white;
+    font-weight: bold;
+}
+
+.parrafos-secciones{
+    text-align: center;
+    backdrop-filter: blur(2px);
+    color: white;
+    font-weight: bold;
+}
+
+.parrafos-seccion-lista{
+    text-align: justify;
+    font-size: medium;
+    backdrop-filter: blur(2px);
+    color: white;
+    font-weight: bold;
+}
+
+/* Seccion 2 y 3 */
+
+.perfumes-showcase {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.perfume-item {
+    text-align: center;
+}
+
+.perfume-item img {
+    max-width: 150px;
+    height: auto;
+}
+
+.perfume-name {
+    backdrop-filter: blur(2px);
+    margin-top: 2px;
+    font-weight: bold;
+}
+
+.img-secc2{
+    
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+
+}
+
+#section2,
+#section3 {
+    background-image: url('../img/seccion23.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#section2 h1,
+#section3 h2, #section4 h2 {
+    margin-bottom: 10px;
+    backdrop-filter: blur(2px);
+}
+
+/* Seccion 4 */
+:root {
+    --color-inactivo: #5f5050;
+    --color-hover: #ffa400;
+}
+.valoracion {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: black;
+}
+.valoracion button {
+    background-color: initial;
+    border: 0;
+    color: var(--color-inactivo);
+    transition: 1s all;
+}
+.valoracion button:hover {
+    cursor: pointer;
+    color: var(--color-hover);
+    transform: rotate(360deg);
+}
+button:nth-child(1):hover ~ button {
+    color: var(--color-hover);
+    transform: rotate(360deg);
+}
+button:nth-child(2):hover ~ button {
+    color: var(--color-hover);
+    transform: rotate(360deg);
+}
+button:nth-child(3):hover ~ button {
+    color: var(--color-hover);
+    transform: rotate(360deg);
+}
+button:nth-child(4):hover ~ button {
+    color: var(--color-hover);
+    transform: rotate(360deg);
+}
+button:nth-child(5):hover ~ button {
+    color: var(--color-hover);
+    transform: rotate(360deg);
+}
+
+/* Seccion 4 */
+#section4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#section4 {
+    background-image: url('../img/seccion1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #c7c7c7;
+}
+
+.seccion4-image{
+    max-height: 100%;
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+/* Cards */
+
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #24242e;
+}
+
+.card {
+    
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 30%;
+}
+
+.card-head {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+}
+
+.card-logo {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.card-title {
+    font-size: 18px;
+    margin: 0;
+}
+
+.card-body {
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    
+    bottom: 0;
+    
+}
+
+.footer-socials {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-icon {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-icon:hover {
+    color: #007BFF;
+}
+
+.footer-location {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.footer-developer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-developer a:hover {
+    color: #007BFF;
+}
+
+/* Media */
+@media (max-width: 450px) {
+    .parrafos-seccion-lista {
+      font-size: small;
+    }
+    .navbar-image{
+        max-height: 100%;
+        height: 70px;
+        width: 70px;
+        
+    }
+  }
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  /* Estilos para dispositivos móviles */
+@media (max-width: 992px) {
+    .cards-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      margin-bottom: 20px;
+      width: 80%;
+    }
+    
+  }
+
+
+/* Desarrollador */
+
+.container-desarrollador{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.card-desarrollador {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+}
+
+.card-desarrollador h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.card-desarrollador p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.card-desarrollador a {
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.card-desarrollador a:hover {
+    text-decoration: underline;
+}
